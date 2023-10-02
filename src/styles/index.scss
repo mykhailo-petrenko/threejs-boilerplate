@@ -1,0 +1,45 @@
+// @font-face {
+//   font-family: "Roboto";
+//   src: url("../fonts/Roboto.ttf");
+// }
+
+@import "variables";
+@import "scaffolding";
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+body > canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+:global {
+  section#CanvasContainer {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+    > canvas {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  #Canvas1 {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
